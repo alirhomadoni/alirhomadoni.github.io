@@ -1,0 +1,163 @@
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+
+
+
+  --vio: #6900c7;
+  --peach: #ff9469;
+  --transition-delay: 0.3s;
+  --transition-delay-step: 0.3s;
+  --skills-width: 120px;
+  --CSS:40%;
+  --HTML:70%;
+  --JavaScript:50%;
+  --PHP:50%;
+  --MySQL:50%;
+  --Laravel:50%;
+  --Python:60%;
+  --DataScience: 40%;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+
+
+
+/* CHART
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart-wrapper {
+  width: 100%;
+  max-width: 750px;
+}
+
+.chart-wrapper .chart-skills li::before,
+.chart-wrapper .chart-skills li::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: var(--skills-width);
+  height: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+.chart-wrapper .chart-skills li::after {
+  width: calc(100% - var(--skills-width));
+  background: rgba(211, 211, 211, 0.3);
+}
+
+.chart-wrapper .chart-skills li::before {
+  width: 0;
+  background: var(--vio);
+  transition: width 0.65s ease-out;
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(1)::before {
+  width: calc(var(--HTML) - var(--skills-width));
+  transition-delay: var(--transition-delay);
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(2)::before {
+  width: calc(var(--CSS) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step)
+  );
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(3)::before {
+  width: calc(var(--JavaScript) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 2
+  );
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(4)::before {
+  width: calc(var(--MySQL) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 3
+  );
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(5)::before {
+  width: calc(var(--PHP) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 5
+  );
+}
+.chart-wrapper.in-view .chart-skills li:nth-child(6)::before {
+  width: calc(var(--Laravel) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 6
+  );
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(7)::before {
+  width: calc(var(--Python) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 7
+  );
+}
+.chart-wrapper.in-view .chart-skills li:nth-child(8)::before {
+  width: calc(var(--DataScience) - var(--skills-width));
+  transition-delay: calc(
+    var(--transition-delay) + var(--transition-delay-step) * 8
+  );
+}
+
+.chart-wrapper .chart-skills span {
+  display: inline-block;
+  width: var(--skills-width);
+  padding: 15px;
+}
+
+.chart-wrapper .chart-levels {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: var(--skills-width);
+}
+
+.chart-wrapper .chart-levels li {
+  border-right: 1px solid rgba(211, 211, 211, 0.3);
+}
+
+.chart-wrapper .chart-levels li:last-child {
+  border-right: 0;
+}
+
+.chart-wrapper .chart-levels span {
+  bottom: 0;
+  transform: translateX(40px) translateY(70px) rotate(45deg);
+  padding: 10px;
+  width: 100%;
+}
