@@ -205,7 +205,7 @@ var airplaneIcon = L.icon({
     iconUrl : 'img/airplane-4-64.png',
     iconSize :[30,30]
 })
-var markerRadar=L.marker([-6.892477,107.579566],{icon : radarIcon,rotationAngle:90}).addTo(map);
+var markerRadar=L.marker([-6.892477,107.579566],{icon : radarIcon}).addTo(map);
 
 
 var circle = L.circle([-6.892477,107.579566],{
