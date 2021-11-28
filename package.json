@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "browserify": "^17.0.0",
+    "danfojs": "^0.3.3",
+    "data-forge": "^1.9.1",
+    "jquery": "^3.6.0",
+    "leaflet-rotatedmarker": "^0.2.0",
+    "loadash": "^1.0.0"
+  },
+  "name": "tubes3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "tugas 1 Pak Eueung",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirhomadoni/alirhomadoni.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alirhomadoni/alirhomadoni.github.io/issues"
+  },
+  "homepage": "https://github.com/alirhomadoni/alirhomadoni.github.io#readme"
+}
