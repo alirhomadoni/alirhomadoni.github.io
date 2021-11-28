@@ -17,7 +17,7 @@ var airplaneIcon = L.icon({
     iconUrl : 'img/airplane-4-64.png',
     iconSize :[30,30]
 })
-var markerRadar=L.marker([-6.892477,107.579566],{icon : radarIcon,rotationAngle:90}).addTo(map);
+var markerRadar=L.rotatedMarker([-6.892477,107.579566],{icon : radarIcon,rotationAngle:90}).addTo(map);
 
 
 var circle = L.circle([-6.892477,107.579566],{
@@ -72,7 +72,7 @@ function myLoop() {         //  create a loop function
           console.log ("tulis baru df nya 1");
           console.table(memory);
         
-          marker[(y)]=L.marker([latitude,longitude],{icon : airplaneIcon,rotationAngle: memory[y][5]});
+          marker[(y)]=L.rotatedMarker([latitude,longitude],{icon : airplaneIcon,rotationAngle: memory[y][5]});
           marker[(y)].bindTooltip(memory[y][0] + "<br>" + memory[y][1] + " knots<br>"+ memory[y][2] + " ft" , {permanent: false ,offset: [10, 10] });
           marker[y].addTo(map).on('click', function(e) {
             console.log("you are clicking this marker "+memory[y][0])
@@ -137,7 +137,7 @@ function myLoop() {         //  create a loop function
             
             marker[i].removeFrom(map);
             //L.polyline(memory[y][6], {color: 'red'}).addTo(map);
-            marker[(i)]=L.marker([lat,lng],{icon : airplaneIcon,rotationAngle: memory[i][5]});
+            marker[(i)]=L.rotatedMarker([lat,lng],{icon : airplaneIcon,rotationAngle: memory[i][5]});
             marker[(i)].bindTooltip(memory[i][0] + "<br>" + memory[i][1] + " knots<br>"+ memory[i][2] + " ft" , {permanent: false ,offset: [10, 10] });
             marker[i].addTo(map).on('click', function(e) {
               console.log("you are clicking this marker " +memory[i][0]);
@@ -185,7 +185,7 @@ function myLoop() {         //  create a loop function
             let i = memory.length-1;
             console.table(memory);
             
-            marker[(i)]=L.marker([data[y].lat,data[y].lon],{icon : airplaneIcon,rotationAngle: data[y].trak});
+            marker[(i)]=L.rotatedMarker([data[y].lat,data[y].lon],{icon : airplaneIcon,rotationAngle: data[y].trak});
             marker[(i)].bindTooltip(memory[i][0] + "<br>" + memory[i][1] + " knots<br>"+ memory[i][2] + " ft" , {permanent: false ,offset: [10, 10] });
             marker[i].addTo(map).on('click', function(e) {
               console.log("you are clicking this marker "+memory[i][0])
