@@ -214,6 +214,16 @@ var circle = L.circle([-6.892477,107.579566],{
     fillOpacity : 0.09
 }).addTo(map);
 
+L.rotatedMarker([48.8631169, 2.3708919], {
+  rotationAngle: 45,
+}).addTo(map);
+
+var marker = new L.RotatedMarker([48.8631169, 2.3708919], {
+  rotationAngle: 145,
+  rotationOrigin: "bottom center",
+}).addTo(map);
+
+
 
 
 var axios = require("axios").default;
